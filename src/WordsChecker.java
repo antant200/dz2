@@ -3,12 +3,12 @@ import java.util.Set;
 
 public class WordsChecker {
     protected  String text;
-    Set <String> set = new HashSet<>();
+    protected String [] words = text.split("\\P{IsAlphabetic}+");
+    protected Set <String> set = new HashSet<>();
     public WordsChecker (String text){
         this.text=text;
     }
     public boolean hasWord (String word){
-        String [] words = text.split("\\P{IsAlphabetic}+");
         for (String newWord:words) {
             set.add(newWord);
         }
