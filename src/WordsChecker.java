@@ -2,9 +2,9 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class WordsChecker {
-    protected  String text;
-    protected String [] words = text.split("\\P{IsAlphabetic}+");
-    protected Set <String> set = new HashSet<>();
+    private   String text;
+    private String [] words = text.split("\\P{IsAlphabetic}+");
+    private Set <String> set = new HashSet<>();
     public WordsChecker (String text){
         this.text=text;
     }
